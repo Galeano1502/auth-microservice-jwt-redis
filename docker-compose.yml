@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - REDIS_URL=redis://redis:6379
+      - JWT_ACCESS_SECRET=minha_chave_de_acesso_secreta_dev
+      - JWT_REFRESH_SECRET=minha_chave_de_refresh_secreta_dev
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6380:6379"  # <--- Altere de "6379:6379" para "6380:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:

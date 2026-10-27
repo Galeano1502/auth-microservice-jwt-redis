@@ -1,0 +1,17 @@
+{
+  "name": "auth-microservice-jwt-redis",
+  "version": "1.0.0",
+  "description": "Microserviço de Autenticação JWT com Refresh Token e Rate Limiting via Redis",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

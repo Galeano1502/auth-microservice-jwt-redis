@@ -1,0 +1,19 @@
+# Dependências do Node (para não enviar a pasta gigante)
+node_modules/
+
+# Variáveis de Ambiente (segurança para não expor segredos)
+.env
+.env.local
+
+# Logs e arquivos de depuração
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos do Sistema Operacional
+Thumbs.db
+.DS_Store
+
+# Arquivos do VS Code / IDEs
+.vscode/
+.idea/
